@@ -4,14 +4,70 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <h1>Hola mundo</h1>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
-      consectetur molestias voluptas modi veritatis temporibus quae nulla,
-      nesciunt unde dolorem hic error sequi, eum ipsa ut ullam neque excepturi
-      alias.
-    </p>
+    <header></header>
+
+    <div class="nav-bg">
+      <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="#">Unidades</a>
+        <a href="contacto.html">Contacto</a>
+        <!-- Simular el enlace -->
+      </nav>
+    </div>
+
+    <main class="contenedor">
+      <!-- ============ HERO ============
+           IMAGEN DE FONDO (opcional): guarda imagenes/hero.jpg
+           tamaño 1920 x 900 px, JPG, menos de 300 KB.
+           Luego descomenta la línea "background-image" de .hero en css/styles.css. -->
+      <section class="hero" aria-labelledby="titulo-hero">
+        <div class="contenido-hero contenedor">
+          <span class="insignia">The Game Awards · 2020 – 2026</span>
+          <h1 id="titulo-hero" class="titulo">
+            Los títulos que marcaron <span class="resaltado">el 2020–2026</span>
+          </h1>
+          <p class="hero-lema">
+            Elige un año, descubre sus juegos más destacados y consulta su
+            categoría, estudio, plataformas, descripción y tráiler, todo en un
+            solo lugar.
+          </p>
+          <div class="acciones-hero">
+            <a class="boton" href="archivo.html">Explorar el archivo</a>
+            <a class="boton boton-sec" href="#coronados">Ver campeones</a>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div
+          class="slider"
+          id="slider"
+          aria-roledescription="carrusel"
+          aria-label="Campeones del Juego del Año"
+        >
+          <div id="slides"></div>
+          <button
+            class="s-btn s-prev"
+            type="button"
+            aria-label="Juego anterior"
+          >
+            ‹
+          </button>
+          <button
+            class="s-btn s-next"
+            type="button"
+            aria-label="Juego siguiente"
+          >
+            ›
+          </button>
+          <div class="dots" id="dots"></div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
   </body>
 </html>

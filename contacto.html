@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header></header>
+
+    <div class="nav-bg">
+      <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="#">Unidades</a>
+        <a href="contacto.html">Contacto</a>
+        <!-- Simular el enlace -->
+      </nav>
+    </div>
+
+    <main id="contendido">
+      <section class="cabecera-pagina">
+        <div class="contenedor">
+          <h1 class="titulo">Contacto</h1>
+          <p class="cabecera-sub">
+            Recomienda un juego, reporta un error o cuéntanos qué te pareció el
+            archivo.
+          </p>
+        </div>
+      </section>
+
+      <div class="contenedor contacto-grid">
+        <!--Contendeor general-->
+        <section aria-labelledby="form-titulo">
+          <div id="exito" class="exito" role="status" tabindex="-1" hidden>
+            <!--cambiar este icono x es de la ia-->
+            <svg viewBox="0 0 24 24" width="44" height="44" aria-hidden="true">
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                fill="currentColor"
+                opacity=".18"
+              />
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m7.500 12.500 3 3 6-7"
+              />
+            </svg>
+            <h3>¡Mensaje enviado!</h3>
+            <p id="exito-texto"></p>
+            <!--insertamosel mensaje con la informacion que pusieron a traves de js-->
+            <button id="otro" class="boton" type="button">
+              Enviar otro mensaje
+            </button>
+          </div>
+
+          <form id="form-contacto" class="formulario" novalidate>
+            <fieldset>
+              <legend>Cuéntanos</legend>
+              <p id="resumen" class="resumen-error" role="alert" hidden></p>
+              <div class="contenedor-campos">
+                <div class="campo">
+                  <label for="nombre"
+                    >Nombre <span class="req" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    class="input-text"
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    placeholder="Escribe tu nombre"
+                    autocomplete="name"
+                    required
+                    aria-describedby="error-nombre"
+                  />
+                  <p class="error" id="error-nombre"></p>
+                </div>
+                <div class="campo">
+                  <label for="correo"
+                    >Correo <span class="req" aria-hidden="true">*</span></label
+                  >
+                  <input
+                    class="input-text"
+                    id="correo"
+                    name="correo"
+                    type="email"
+                    placeholder="nombre@correo.com"
+                    autocomplete="email"
+                    required
+                    aria-describedby="errror-correo"
+                  />
+                  <p class="error" id="error-correo"></p>
+                </div>
+                <div class="campo">
+                  <label for="telefono"
+                    >Teléfono <small>(opcional)</small></label
+                  >
+                  <input
+                    class="input-text"
+                    id="telefono"
+                    name="telefono"
+                    type="tel"
+                    placeholder="0999999999"
+                    autocomplete="tel"
+                    aria-describedby="error-telefono"
+                  />
+                  <p class="error" id="error-telefono"></p>
+                </div>
+                <div class="campo">
+                  <label for="asunto"
+                    >Asunto <span class="req" aria-hidden="true">*</span></label
+                  >
+                  <select
+                    class="input-text"
+                    id="asunto"
+                    name="asunto"
+                    required
+                    aria-describedby="error-asunto"
+                  >
+                    <option value="">Selecciona una opción</option>
+                    <option>Recomendar un juego</option>
+                    <option>Reportar un error</option>
+                    <option>Comentarios generales</option>
+                  </select>
+                  <p class="error" id="error-asunto"></p>
+                </div>
+                <div class="campo campo-ancho">
+                  <label for="mensaje"
+                    >Mensaje
+                    <span class="req" aria-hidden="true">*</span></label
+                  >
+                  <textarea
+                    class="input-text"
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    maxlength="500"
+                    placeholder="Cuéntanos qué juego falta y por qué marcó época…"
+                    required
+                    aria-describedby="error-mensaje contador"
+                  ></textarea>
+                  <div class="campo-pie">
+                    <p class="error" id="error-mensaje"></p>
+                    <p class="contador" id="contador" aria-live="off">
+                      0 / 500
+                    </p>
+                  </div>
+                </div>
+                <div class="campo campo-ancho">
+                  <label class="check">
+                    <input
+                      id="acepto"
+                      name="acepto"
+                      type="checkbox"
+                      required
+                      aria-describedby="error-acepto"
+                    />
+                    <span
+                      >Acepto que mi mensaje se guarde localmente en este
+                      navegador.</span
+                    >
+                  </label>
+                  <p class="error" id="error-acepto"></p>
+                </div>
+              </div>
+
+              <div class="enviar">
+                <button class="boton" type="submit" id="enviar">
+                  Enviar mensaje
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+
+        <!--Contine informacion que complementa -->
+        <aside class="contacto-lateral" aria-labelledby="faq-titulo">
+          <article class="tarjeta-info">
+            <!--informacion de nosotros-->
+            <h2>Autores</h2>
+            <p>Anthony Obando Pilco - Pedro Enrique Villon</p>
+            <p>Guayaquil, Ecuador</p>
+          </article>
+          <section class="preguntas">
+            <h2 id="faq-titulo">Preguntas frecuentes</h2>
+            <div class="faq" data-acordeon data-solo-uno>
+              <div class="faq-item">
+                <h3>
+                  <button
+                    class="acordeon-boton"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-0"
+                  >
+                    <span>¿Cómo eligen los juegos del archivo?</span>
+                  </button>
+                </h3>
+                <div class="acordeon-panel" id="faq-0" hidden>
+                  <p>
+                    Combinamos tres criterios: impacto cultural, reconocimiento
+                    (premios y crítica) e influencia sobre otros juegos. Puedes
+                    verlos en la página de inicio.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <h3>
+                  <button
+                    class="acordeon-boton"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-1"
+                  >
+                    <span>¿Por qué mi juego favorito no aparece?</span>
+                  </button>
+                </h3>
+                <div class="acordeon-panel" id="faq-1" hidden>
+                  <p>
+                    El archivo es una selección, no una lista completa. Si crees
+                    que falta un título importante, usa este formulario para
+                    recomendarlo.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <h3>
+                  <button
+                    class="acordeon-boton"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-2"
+                  >
+                    <span>¿De quién son las imágenes y los videos?</span>
+                  </button>
+                </h3>
+                <div class="acordeon-panel" id="faq-2" hidden>
+                  <p>
+                    Los nombres, logotipos, imágenes y tráilers pertenecen a sus
+                    desarrolladores y editores. El sitio es educativo y sin
+                    fines de lucro.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <h3>
+                  <button
+                    class="acordeon-boton"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="faq-3"
+                  >
+                    <span>¿Qué pasa con mis datos?</span>
+                  </button>
+                </h3>
+                <div class="acordeon-panel" id="faq-3" hidden>
+                  <p>
+                    Este proyecto es académico: el mensaje solo se valida y se
+                    guarda en el almacenamiento local de tu navegador. No se
+                    envía a ningún servidor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>
+        Todos los derechos reservados &copy; Anthony Obando Pilco y Pedro
+        Enrique Villon
+      </p>
+    </footer>
+  </body>
+</html>
