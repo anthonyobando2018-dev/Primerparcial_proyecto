@@ -19,29 +19,59 @@
       </nav>
     </div>
 
+    <section class="hero" aria-labelledby="titulo-hero">
+      <div class="contenido-hero contenedor">
+        <span class="insignia">The Game Awards · 2020 – 2026</span>
+        <h1 id="titulo-hero" class="titulo">
+          Los títulos que marcaron <span class="resaltado">el 2020–2026</span>
+        </h1>
+        <p class="hero-lema">
+          Elige un año, descubre sus juegos más destacados y consulta su
+          categoría, estudio, plataformas, descripción y tráiler, todo en un
+          solo lugar.
+        </p>
+        <div class="acciones-hero">
+          <a class="boton" href="juegos.html">Explorar el archivo</a>
+          <a class="boton boton-sec" href="#coronados">Ver campeones</a>
+        </div>
+      </div>
+    </section>
+
     <main class="contenedor">
-      <!-- ============ HERO ============
-           IMAGEN DE FONDO (opcional): guarda imagenes/hero.jpg
-           tamaño 1920 x 900 px, JPG, menos de 300 KB.
-           Luego descomenta la línea "background-image" de .hero en css/styles.css. -->
-      <section class="hero" aria-labelledby="titulo-hero">
-        <div class="contenido-hero contenedor">
-          <span class="insignia">The Game Awards · 2020 – 2026</span>
-          <h1 id="titulo-hero" class="titulo">
-            Los títulos que marcaron <span class="resaltado">el 2020–2026</span>
-          </h1>
-          <p class="hero-lema">
-            Elige un año, descubre sus juegos más destacados y consulta su
-            categoría, estudio, plataformas, descripción y tráiler, todo en un
-            solo lugar.
-          </p>
-          <div class="acciones-hero">
-            <a class="boton" href="archivo.html">Explorar el archivo</a>
-            <a class="boton boton-sec" href="#coronados">Ver campeones</a>
-          </div>
+      <section class="camepones" aria-labelledby="t-campeones">
+        <h2 id="t-campeones" class="seccion-titulo">
+          Ganadores al Mejor Juego del Año
+        </h2>
+        <p class="seccion-sub">
+          Los ganadores de GOTY en The Game Awards desde 2020, más el gran
+          nominado de 2026. Usa las flechas o espera: el carrusel avanza solo.
+        </p>
+        <div
+          class="slider"
+          id="slider"
+          aria-roledescription="carrusel"
+          aria-label="Ganadores al Mejor Juego del año"
+        >
+          <div class="slides"></div>
+          <button
+            class="slides-boton slide-anterior"
+            type="button"
+            aria-label="Juego anterior"
+          ></button>
+          <button
+            class="slides-boton slide-siguiente"
+            type="button"
+            aria-label="Juego sigueinte"
+          ></button>
+          <div class="dots" id="dots"></div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <p>
+        Todos los derechos reservados &copy; Anthony Obando Pilco y Pedro
+        Enrique Villon
+      </p>
+    </footer>
   </body>
 </html>
