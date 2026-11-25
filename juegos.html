@@ -34,14 +34,63 @@
 
       <section>
         <div class="filtro-juegos">
-          <input type="radio" name="anio" id="a-2020" class="f-radio" checked />
-          <input type="radio" name="anio" id="a-2021" class="f-radio" />
-          <input type="radio" name="anio" id="a-2022" class="f-radio" />
-          <input type="radio" name="anio" id="a-2023" class="f-radio" />
-          <input type="radio" name="anio" id="a-2024" class="f-radio" />
-          <input type="radio" name="anio" id="a-2025" class="f-radio" />
-          <input type="radio" name="anio" id="a-2026" class="f-radio" />
-          <input type="radio" name="anio" id="a-todos" class="f-radio" />
+          <input
+            type="radio"
+            name="anio"
+            id="a-2020"
+            value="2020"
+            class="f-radio"
+            checked
+          />
+          <input
+            type="radio"
+            name="anio"
+            id="a-2021"
+            value="2021"
+            class="f-radio"
+          />
+          <input
+            type="radio"
+            name="anio"
+            id="a-2022"
+            value="2022"
+            class="f-radio"
+          />
+          <input
+            type="radio"
+            name="anio"
+            id="a-2023"
+            value="2023"
+            class="f-radio"
+          />
+          <input
+            type="radio"
+            name="anio"
+            id="a-2024"
+            value="2024"
+            class="f-radio"
+          />
+          <input
+            type="radio"
+            name="anio"
+            id="a-2025"
+            value="2025"
+            class="f-radio"
+          />
+          <input
+            type="radio"
+            name="anio"
+            id="a-2026"
+            value="2026"
+            class="f-radio"
+          />
+          <input
+            type="radio"
+            name="anio"
+            id="a-todos"
+            value="todos"
+            class="f-radio"
+          />
           <input type="radio" name="cat" id="c-todas" class="f-radio" checked />
           <input
             type="radio"
@@ -61,10 +110,12 @@
               <label class="tab" for="a-2026">2026</label>
               <label class="tab" for="a-todos">Todos</label>
             </div>
-
+            <!--Filtro por categoria-->
             <div class="campo-filtro">
               <label for="categoria">Categoría</label>
-              <select id="categoria" class="input-text"></select>
+              <select id="categoria" class="input-text">
+                <option value="todas">Todas las categorias</option>
+              </select>
             </div>
             <!-- BÚSQUEDA: queda reservada para cuando agregues JavaScript (filtrar mientras se escribe).
                  Cuando la actives, quita el atributo disabled. -->
@@ -74,7 +125,7 @@
                 id="buscar"
                 class="input-text"
                 type="search"
-                placeholder="Disponible cuando se agregue JavaScript"
+                placeholder="Disponible cuando se agregue JavaScript o sino no lo ponemos"
                 disabled
               />
             </div>
@@ -83,7 +134,22 @@
 
         <div class="grid-juegos">
           <!--2020-->
-          <article class="juego" data-anio="2020" data-cat="accion-y-aventura">
+          <article
+            class="juego"
+            tabindex="0"
+            data-anio="2020"
+            data-cat="accion-y-aventura"
+            data-titulo="The Last of Us Part II"
+            data-estudio="Naughty Dog"
+            data-descripcion="Una secuela valiente que dividió a la comunidad. Ellie emprende un viaje marcado por la venganza y las consecuencias de sus decisiones."
+            data-fecha="19 de junio de 2020"
+            data-plataformas="PS4"
+            data-premios="Juego del Año en The Game Awards 2020"
+            data-imagen="images/juegos/TheLastofUs/TheLastOfUsPartII2.jpg"
+            data-trailer="https://www.youtube.com/embed/vhII1qlcZ4E"
+            data-web="https://www.naughtydog.com/blog/the_last_of_us_part_ii"
+            data-goty="https://thegameawards.com/rewind/year-2020#winners"
+          >
             <a
               class="juego-media"
               href="#"
@@ -114,7 +180,20 @@
               </div>
             </div>
           </article>
-          <article class="juego" data-anio="2020" data-cat="roguelike">
+          <article
+            class="juego"
+            data-anio="2020"
+            data-cat="roguelike"
+            data-titulo="Hades"
+            data-estudio="Supergiant Games"
+            data-fecha="17 de septiembre"
+            data-descripcion="Zagreus intenta escapar del Inframundo en un roguelike veloz, con arte espectacular y una historia que avanza con cada intento fallido."
+            data-plataformas="Pc, PS4, PS5, Xbox, Nintendo Switch "
+            data-imagen="images/juegos/Hades/Hades2"
+            data-trailer="https://www.youtube.com/embed/91t0ha9x0AE"
+            data-web="https://www.supergiantgames.com/games/hades/"
+            data-steam="https://store.steampowered.com/app/1145360/Hades/"
+          >
             <a class="juego-media" href="#" aria-label="Ver detalles de Hades">
               <img
                 class="poster-juego"
@@ -140,7 +219,21 @@
           </article>
 
           <!--2021-->
-          <article class="juego" data-anio="2021" data-cat="plataformas">
+          <article
+            class="juego"
+            data-anio="2021"
+            data-cat="Plataformas"
+            data-titulo="It Takes Two"
+            data-descripcion="Aventura exclusivamente cooperativa para dos jugadores, con mecánicas distintas en cada capítulo y una historia sobre una pareja convertida en muñecos."
+            data-estudio="Hazelight Studios"
+            data-fecha="26 de marzo del 2021"
+            data-plataformas="Pc, PS4, PS5, Xbox, Nintendo Switch "
+            data-imagen="images/juegos/ItTkaeTwo/ItTakeTwo2.jpg"
+            data-trailer="https://www.youtube.com/embed/ohClxMmNLQQ"
+            data-goty="https://thegameawards.com/rewind/year-2021#winners"
+            data-web="https://www.ea.com/es/games/it-takes-two/it-takes-two"
+            data-steam="https://store.steampowered.com/app/1426210/It_Takes_Two/"
+          >
             <a
               class="juego-media"
               href="#"
@@ -177,6 +270,102 @@
           <!--2025-->
           <!--2026-->
         </div>
+        <!--Ventana de informacion del juego-->
+        <div class="modal-juego" id="modalJuego" hidden>
+          <div
+            class="modal-contenido"
+            role="dialog"
+            aria-labelledby="modalTitulo"
+          >
+            <button
+              class="modal-cerrar"
+              id="cerrarModal"
+              type="button"
+              aria-label="Cerrar ventana"
+            >
+              &times;
+            </button>
+            <div class="modal-portada">
+              <!--ijmagen de portada-->
+              <img id="modalImagen" src="" alt="" />
+            </div>
+            <div class="modal-informacion">
+              <div class="modal-principal">
+                <div class="modal-chips">
+                  <span id="modalCategoria"></span>
+                  <span id="modalAnio"></span>
+                  <span id="modalFecha"></span>
+                </div>
+                <h2 id="modalTitulo"></h2>
+                <p id="modalDescripcion"></p>
+                <div class="modal-botones">
+                  <a
+                    id="modalWeb"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Página oficial
+                  </a>
+
+                  <a
+                    id="modalSteam"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Ver en Steam
+                  </a>
+                  <a
+                    id="modalGoty"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    The Game Awards
+                  </a>
+                </div>
+              </div>
+              <div class="modal-datos">
+                <div>
+                  <span>Categoria</span>
+                  <p id="modalCategoriaDato"></p>
+                </div>
+                <div>
+                  <span>Año de lanzamiento</span>
+                  <p id="modalAnioDato"></p>
+                </div>
+                <div>
+                  <span>Desarrolladora</span>
+                  <p id="modalEstudio"></p>
+                </div>
+                <div>
+                  <span>Plataformas</span>
+                  <p id="modalPlataformas"></p>
+                </div>
+                <div>
+                  <span>Premios</span>
+                  <p id="modalPremios"></p>
+                </div>
+              </div>
+            </div>
+            <div class="modal-trailer">
+              <!--Seccion de Trasiler-->
+              <h3>tráiler</h3>
+              <div class="trailer-contenido" id="trailerContenido">
+                <p id="trailerMensaje">Aqui aparecera el trailer del juego.</p>
+                <iframe
+                  id="modalTrailer"
+                  src=""
+                  title="Trailer del viedoJuego"
+                  allowfullscreen
+                  loading="lazy"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
@@ -185,5 +374,6 @@
         Enrique Villon
       </p>
     </footer>
+    <script src="js/juego.js"></script>
   </body>
 </html>

@@ -88,10 +88,10 @@ p {
 .tab:hover { 
     border-color: black; 
 }
-.tab[aria-selected="true"] {
-    background: var(--acento);
-    color: var(--acento-sobre);
-    border-color: var(--acento);
+.tab.activo {
+    background-color: white;
+    color: green;
+    border-color: red;
 }
 .f-radio { 
     position: absolute; 
@@ -117,6 +117,7 @@ p {
     border-radius: 1.4rem;
     transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
     animation: aparecer 0.5s ease-out backwards;
+    cursor: pointer;
 }
 .juego:hover {
     transform: translateY(-5px);
@@ -180,7 +181,232 @@ p {
     border-radius: 99rem;
 }
 
+/* =========================
+   MODAL DE VIDEOJUEGOS
+========================= */
 
+/* Fondo oscuro que cubre toda la página */
+.modal-juego {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+/* Ocultar el modal cuando tiene el atributo hidden */
+.modal-juego[hidden] {
+    display: none;
+}
+
+/* Ventana principal */
+.modal-contenido {
+    position: relative;
+
+    width: 100%;
+    max-width: 90rem;
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #222;
+    border: 1px solid #444;
+    border-radius: 1.4rem;
+
+    color: #f2f2f2;
+}
+
+/* Botón de cerrar */
+.modal-cerrar {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    z-index: 5;
+
+    width: 3.5rem;
+    height: 3.5rem;
+
+    font-size: 2.5rem;
+    line-height: 1;
+
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #777;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+/* Imagen horizontal de 1920 x 1080 */
+.modal-portada {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #111;
+}
+
+.modal-portada img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Distribución de la información */
+.modal-informacion {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+
+    padding: 2.5rem;
+}
+
+.modal-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-chips span {
+    padding: 0.3rem 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    color: #eee;
+    background: #444;
+    border-radius: 99rem;
+}
+
+.modal-principal h2 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.modal-principal p {
+    color: #ccc;
+}
+
+/* Datos de la derecha */
+.modal-datos > div {
+    margin-bottom: 1.4rem;
+}
+
+.modal-datos span {
+    display: block;
+    margin-bottom: 0.3rem;
+
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #999;
+
+    text-transform: uppercase;
+}
+
+.modal-datos p {
+    margin: 0;
+    font-size: 1.4rem;
+}
+/* BOTONES DEL MODAL */
+.modal-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.modal-botones a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    background: #333;
+    border: 1px solid #555;
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.modal-botones a:hover {
+    background: var(--acento);
+    transform: translateY(-2px);
+}
+
+.modal-botones a[hidden] {
+    display: none;
+}
+
+/* Sección del tráiler */
+.modal-trailer {
+    padding: 0 2.5rem 2.5rem;
+}
+
+.modal-trailer h3 {
+    font-size: 2rem;
+}
+
+.trailer-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 20rem;
+    padding: 2rem;
+
+    background: #292929;
+    border: 1px solid #444;
+    border-radius: 1rem;
+}
+
+.trailer-contenido p {
+    color: #aaa;
+    text-align: center;
+}
+
+.trailer-contenido iframe {
+    display: none;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 0.8rem;
+}
+
+.trailer-contenido iframe[src]:not([src=""]) {
+    display: block;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 700px) {
+
+    .modal-juego {
+        padding: 1rem;
+    }
+
+    .modal-informacion {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.8rem;
+    }
+
+    .modal-principal h2 {
+        font-size: 2.4rem;
+    }
+
+    .modal-trailer {
+        padding: 0 1.8rem 1.8rem;
+    }
+
+}
+
+[hidden] {
+    display: none !important;
+}
 
 /*CONTACTO*/
 
