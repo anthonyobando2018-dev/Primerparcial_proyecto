@@ -27,7 +27,9 @@ h3 {
     line-height: 1.15;
     margin: 0 0 1rem;
     text-wrap: balance;
+    text-align: center; 
 }
+
 p { 
     margin: 0 0 1.2rem; 
 }
@@ -96,6 +98,39 @@ p {
 }
 
 /*Slider carrucel de imagenes*/
+
+/**/
+.seccion-titulo { 
+    margin: 3rem 0 0.5rem; 
+}
+.seccion-sub { 
+    color: var(--suave); 
+    max-width: 70rem; 
+    margin: 0 auto 2rem; 
+    line-height: 1.7; 
+}
+
+.lenguajes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 3rem;
+  margin-bottom: 3rem;
+}
+.lenguaje h3 { color: var(--texto); letter-spacing: 0.1rem; }
+.lenguaje p { line-height: 1.8; color: var(--suave); }
+.lenguaje .iconos {
+  height: 10rem; width: 10rem;
+  background-color: var(--secundario);
+  color: var(--blanco);
+  font-size: 3.6rem; font-weight: 800;
+  border-radius: 50%;
+  display: flex; justify-content: center; align-items: center;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s;
+}
+.lenguaje .iconos:hover { transform: scale(1.1); }
+
 
 /*BOTONES*/
 .boton {
